@@ -22,7 +22,16 @@ namespace Assignment1
 		// Connects to your SQL Server database
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			optionsBuilder.UseSqlServer("your connection string here");
+			try{
+				optionsBuilder.UseSqlServer(
+				@"Server=.\SQLEXPRESS;Database=EFCoreDemo;Trusted_Connection=True;TrustServerCertificate=True;"
+			);
+			}
+			catch (Exception d)
+			{
+				Console.WriteLine($"Didnt work: {d}");
+			}
+			
 		}
 	}
 }

@@ -7,8 +7,8 @@ namespace Assignment1.Migrations
     /// <inheritdoc />
     public partial class UserSchema : Migration
     {
-        /// <inheritdoc />
-        protected override void Up(MigrationBuilder migrationBuilder)
+		/// <inheritdoc />
+		protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
                 name: "BlogTypes",
@@ -132,7 +132,7 @@ namespace Assignment1.Migrations
                 column: "UserId");
         }
 
-        /// <inheritdoc />
+        /// <inheritdoc />  // new steps //
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
